@@ -16,7 +16,7 @@ name        = Attorney Generals Department
 description = A Captovate theme for Attorney Generals Department
 
 
-; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen.
+; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen. test
 
 core        = 7.x
 base theme  = govcms_zen
