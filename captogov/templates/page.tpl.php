@@ -75,7 +75,6 @@
       $sidebar_first  = render($page['sidebar_first']);
       $sidebar_second = render($page['sidebar_second']);
     ?>
-xfgcvjbl
     <?php if (($sidebar_first || $sidebar_second) && !$is_front): ?>
       <aside class="sidebars" role="complementary">
         <?php print $sidebar_first; ?>
