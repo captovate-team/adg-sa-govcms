@@ -1,0 +1,10 @@
+.search-results {
+  list-style-type: none;
+  padding: 0;
+  a {
+    font-weight: 700;
+  }
+  .search-snippet {
+    font-size: $base-font-size - 1;
+  }
+}

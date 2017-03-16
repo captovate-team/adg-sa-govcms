@@ -1,0 +1,235 @@
+/*
+
+ _________________  _____      _____      _____           _____          _____         _____          ____        _____    ____   ____  _____      _____
+/                 \|\    \    /    /| ___|\    \     ____|\    \     ___|\    \    ___|\    \    ____|\   \   ___|\    \  |    | |    ||\    \    /    /|
+\______     ______/| \    \  /    / ||    |\    \   /     /\    \   /    /\    \  |    |\    \  /    /\    \ |    |\    \ |    | |    || \    \  /    / |
+   \( /    /  )/   |  \____\/    /  /|    | |    | /     /  \    \ |    |  |____| |    | |    ||    |  |    ||    | |    ||    |_|    ||  \____\/    /  /
+    ' |   |   '     \ |    /    /  / |    |/____/||     |    |    ||    |    ____ |    |/____/ |    |__|    ||    |/____/||    .-.    | \ |    /    /  /
+      |   |          \|___/    /  /  |    ||    |||     |    |    ||    |   |    ||    |\    \ |    .--.    ||    ||    |||    | |    |  \|___/    /  /
+     /   //              /    /  /   |    ||____|/|\     \  /    /||    |   |_,  ||    | |    ||    |  |    ||    ||____|/|    | |    |      /    /  /
+    /___//              /____/  /    |____|       | \_____\/____/ ||\ ___\___/  /||____| |____||____|  |____||____|       |____| |____|     /____/  /
+   |`   |              |`    | /     |    |        \ |    ||    | /| |   /____ / ||    | |    ||    |  |    ||    |       |    | |    |    |`    | /
+   |____|              |_____|/      |____|         \|____||____|/  \|___|    | / |____| |____||____|  |____||____|       |____| |____|    |_____|/
+     \(                   )/           \(              \(    )/       \( |____|/    \(     )/    \(      )/    \(           \(     )/         )/
+      '                   '             '               '    '         '   )/        '     '      '      '      '            '     '          '
+                                                                           '
+*/
+/*
+    //    / /
+   //___ / /  ___      ___      ___   / ( )   __      ___      ___
+  / ___   / //___) ) //   ) ) //   ) / / / //   ) ) //   ) ) ((   ) )
+ //    / / //       //   / / //   / / / / //   / / ((___/ /   \ \
+//    / / ((____   ((___( ( ((___/ / / / //   / /   //__   //   ) )
+*/
+
+h1, h2, h3, h4, h5, p, a, li, {
+	font-family: $base-font-family;
+}
+h1, h2, h3, h4, h5{
+	color: $primary-color;
+	font-weight: bold;
+}
+h1{
+    background-color:$light-bg-color;
+}
+h2{
+	color: $primary-color-lighter;
+}
+h3{
+	color: $darker-gray-text;
+}
+/*
+
+     ______    ____             ______        ______  _______        ______  _____   ______   _________________      ______
+ ___|\     \  |    |        ___|\     \      |      \/       \   ___|\     \|\    \ |\     \ /                 \ ___|\     \
+|     \     \ |    |       |     \     \    /          /\     \ |     \     \\\    \| \     \\______     ______/|    |\     \
+|     ,_____/||    |       |     ,_____/|  /     /\   / /\     ||     ,_____/|\|    \  \     |  \( /    /  )/   |    |/____/|
+|     \--'\_|/|    |  ____ |     \--'\_|/ /     /\ \_/ / /    /||     \--'\_|/ |     \  |    |   ' |   |   ' ___|    \|   | |
+|     /___/|  |    | |    ||     /___/|  |     |  \|_|/ /    / ||     /___/|   |      \ |    |     |   |    |    \    \___|/
+|     \____|\ |    | |    ||     \____|\ |     |       |    |  ||     \____|\  |    |\ \|    |    /   //    |    |\     \
+|____ '     /||____|/____/||____ '     /||\____\       |____|  /|____ '     /| |____||\_____/|   /___//     |\ ___\|_____|
+|    /_____/ ||    |     |||    /_____/ || |    |      |    | / |    /_____/ | |    |/ \|   ||  |`   |      | |    |     |
+|____|     | /|____|_____|/|____|     | / \|____|      |____|/  |____|     | / |____|   |___|/  |____|       \|____|_____|
+  \( |_____|/   \(    )/     \( |_____|/     \(          )/       \( |_____|/    \(       )/      \(            \(    )/
+   '    )/       '    '       '    )/         '          '         '    )/        '       '        '             '    '
+        '                          '                                    '
+*/
+a{
+	color: $primary-color-lighter;
+	&:hover{
+		color: $secondary-color;
+		text-decoration: underline;
+	}
+	&:visited{
+		color: $primary-gray-text;
+	}
+}
+a.external{
+	&:after{
+		content:"";
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		background: no-repeat center url("../images/external-link-symbol.svg");
+		background-size: contain;
+		padding-left: 10px;
+	}
+}
+hr{
+	border: 2px solid $primary-color-lighter;
+}
+blockquote{
+	color: $primary-color-lighter;
+	font-weight: bold;
+	background-color: $light-bg-color;
+	text-align: center;
+	font-size: 1.4em;
+	padding: 45px;
+	padding-top: 100px;
+	margin: 0;
+	position: relative;
+	&:before{
+		content:"";
+		display: block;
+		width: 60px;
+		height: 60px;
+		background: no-repeat center url("../images/quote.svg");
+		position: absolute;
+		left: 50%;
+		top: 20px;
+		transform: translateX(-50%);
+	}
+}
+div.important{
+	color: #ffffff;
+	background-color: $primary-color-lighter;
+	padding: 40px;
+	font-size: 1.3em;
+}
+
+.field-label{
+	font-size: 1.68em;
+    line-height: 1.16667em;
+    margin-top: 0.41667em;
+    margin-bottom: 0.41667em;
+    color: #143f88;
+    font-weight: bold;
+}
+
+/*
+
+      _____         _____         _____           _____         _____        _____    ____         _____  _____   ______            ______
+  ___|\    \    ___|\    \    ___|\    \     ____|\    \    ___|\    \   ___|\    \  |    |   ____|\    \|\    \ |\     \       ___|\     \
+ /    /\    \  /    /\    \  /    /\    \   /     /\    \  |    |\    \ |    |\    \ |    |  /     /\    \\\    \| \     \     |    |\     \
+|    |  |    ||    |  |    ||    |  |    | /     /  \    \ |    | |    ||    | |    ||    | /     /  \    \\|    \  \     |    |    |/____/|
+|    |__|    ||    |  |____||    |  |____||     |    |    ||    |/____/ |    | |    ||    ||     |    |    ||     \  |    | ___|    \|   | |
+|    .--.    ||    |   ____ |    |   ____ |     |    |    ||    |\    \ |    | |    ||    ||     |    |    ||      \ |    ||    \    \___|/
+|    |  |    ||    |  |    ||    |  |    ||\     \  /    /||    | |    ||    | |    ||    ||\     \  /    /||    |\ \|    ||    |\     \
+|____|  |____||\ ___\/    /||\ ___\/    /|| \_____\/____/ ||____| |____||____|/____/||____|| \_____\/____/ ||____||\_____/||\ ___\|_____|
+|    |  |    || |   /____/ || |   /____/ | \ |    ||    | /|    | |    ||    /    | ||    | \ |    ||    | /|    |/ \|   ||| |    |     |
+|____|  |____| \|___|    | / \|___|    | /  \|____||____|/ |____| |____||____|____|/ |____|  \|____||____|/ |____|   |___|/ \|____|_____|
+  \(      )/     \( |____|/    \( |____|/      \(    )/      \(     )/    \(    )/     \(       \(    )/      \(       )/      \(    )/
+   '      '       '   )/        '   )/          '    '        '     '      '    '       '        '    '        '       '        '    '
+                      '             '
+*/
+.cke_editable div.accordion-button{
+	border: dashed 1px red;
+}
+.cke_editable div.accordion-container{
+	border: dashed 1px blue;
+}
+button.accordion-button,
+div.accordion-button{
+    padding: 25px 35px;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+    display: block;
+    position: relative;
+    color: $primary-gray-text;
+    font-size: 1.2em;
+    &:before{
+	    content: "";
+	    font-size: 1em;
+	    display: inline-block;
+	    background-color: $secondary-color;
+	    width: 30px;
+	    height: 30px;
+	    position: absolute;
+	    bottom: 0;
+	    right: 0;
+	}
+	&:after{
+	    content: "";
+	    display: block;
+	    width: 8px;
+	    height: 8px;
+	    border-right: 2px solid #ffffff;
+	    border-bottom: 2px solid #ffffff;
+	    position: absolute;
+	    bottom: 10px;
+	    right: 10px;
+	    transform: rotate(45deg);
+	    transition: transform 0.3s ease;
+	}
+	&.open{
+		&:after{
+				    transform: rotate(-135deg);
+		}
+	}
+}
+div.accordion-container{
+	padding: 25px 35px;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+    color: $primary-color;
+    font-size: 1.2em;
+}
+
+/*
+
+ _________________       ____         _____    ____             ______                 _____          _____              _____           _____  _____   ______   _________________      ______  _____   ______   _________________      ______
+/                 \ ____|\   \   ___|\     \  |    |        ___|\     \           ____|\    \    ____|\    \         ___|\    \     ____|\    \|\    \ |\     \ /                 \ ___|\     \|\    \ |\     \ /                 \ ___|\     \
+\______     ______//    /\    \ |    |\     \ |    |       |     \     \         /     /\    \  |    | \    \       /    /\    \   /     /\    \\\    \| \     \\______     ______/|     \     \\\    \| \     \\______     ______/|    |\     \
+   \( /    /  )/  |    |  |    ||    | |     ||    |       |     ,_____/|       /     /  \    \ |    |______/      |    |  |    | /     /  \    \\|    \  \     |  \( /    /  )/   |     ,_____/|\|    \  \     |  \( /    /  )/   |    |/____/|
+    ' |   |   '   |    |__|    ||    | /_ _ / |    |  ____ |     \--'\_|/      |     |    |    ||    |----'\       |    |  |____||     |    |    ||     \  |    |   ' |   |   '    |     \--'\_|/ |     \  |    |   ' |   |   ' ___|    \|   | |
+      |   |       |    .--.    ||    |\    \  |    | |    ||     /___/|        |     |    |    ||    |_____/       |    |   ____ |     |    |    ||      \ |    |     |   |        |     /___/|   |      \ |    |     |   |    |    \    \___|/
+     /   //       |    |  |    ||    | |    | |    | |    ||     \____|\       |\     \  /    /||    |             |    |  |    ||\     \  /    /||    |\ \|    |    /   //        |     \____|\  |    |\ \|    |    /   //    |    |\     \
+    /___//        |____|  |____||____|/____/| |____|/____/||____ '     /|      | \_____\/____/ ||____|             |\ ___\/    /|| \_____\/____/ ||____||\_____/|   /___//         |____ '     /| |____||\_____/|   /___//     |\ ___\|_____|
+   |`   |         |    |  |    ||    /     || |    |     |||    /_____/ |       \ |    ||    | /|    |             | |   /____/ | \ |    ||    | /|    |/ \|   ||  |`   |          |    /_____/ | |    |/ \|   ||  |`   |      | |    |     |
+   |____|         |____|  |____||____|_____|/ |____|_____|/|____|     | /        \|____||____|/ |____|              \|___|    | /  \|____||____|/ |____|   |___|/  |____|          |____|     | / |____|   |___|/  |____|       \|____|_____|
+     \(             \(      )/    \(    )/      \(    )/     \( |_____|/            \(    )/      )/                  \( |____|/      \(    )/      \(       )/      \(              \( |_____|/    \(       )/      \(            \(    )/
+      '              '      '      '    '        '    '       '    )/                '    '       '                    '   )/          '    '        '       '        '               '    )/        '       '        '             '    '
+                                                                   '                                                       '                                                               '
+*/
+.toc-filter{
+	padding: 10px 0px;;
+	@include title-bar($secondary-color, before, 0); 
+	&:before{
+		left: 0;
+		transform: none;
+	}
+	.toc-filter-content{
+		padding: 0px;
+		background-color: initial;
+		border: none;
+		h3{
+			color: $primary-color-lighter;
+			font-weight: bold;
+		}
+		ul{
+			margin-left: 0px;
+			li{
+				text-transform: uppercase;
+				list-style-type: none;
+				a{
+					color: $primary-color-lighter;	
+					font-weight: bold;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+
+

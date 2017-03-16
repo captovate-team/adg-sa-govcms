@@ -1,0 +1,175 @@
+/*
+ * Classes that can be used in CKEditor
+ */
+
+// Plain CSS
+.layout-row {
+  *zoom: 1; }
+  .layout-row:before, .layout-row:after {
+    content: '';
+    display: table; }
+  .layout-row:after {
+    clear: both; 
+}
+body.cke_editable {
+  padding: 20px;
+}
+
+body.cke_editable .layout-row {
+  padding: 10px;
+  margin: 0 -10px 20px;
+  border: 1px dashed pink;
+}
+
+body.cke_editable .layout-row > div {
+  border: 1px dashed #a5d3e4;
+}
+
+body.cke_editable table td {
+  border: 1px dashed #ccc;
+}
+
+@media (min-width: 769px) {
+  .col-one-half {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .col-one-half:before, .col-one-half:after {
+    content: '';
+    display: table;
+  }
+  .col-one-half:after {
+    clear: both;
+  }
+  .col-one-half:last-child {
+    margin-right: 0%;
+  }
+  .col-one-third {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 31.33333%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .col-one-third:before, .col-one-third:after {
+    content: '';
+    display: table;
+  }
+  .col-one-third:after {
+    clear: both;
+  }
+  .col-one-third:last-child {
+    margin-right: 0%;
+  }
+  .col-two-thirds {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 65.66667%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .col-two-thirds:before, .col-two-thirds:after {
+    content: '';
+    display: table;
+  }
+  .col-two-thirds:after {
+    clear: both;
+  }
+  .col-two-thirds:last-child {
+    margin-right: 0%;
+  }
+  .col-one-quarter {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 22.75%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .col-one-quarter:before, .col-one-quarter:after {
+    content: '';
+    display: table;
+  }
+  .col-one-quarter:after {
+    clear: both;
+  }
+  .col-one-quarter:last-child {
+    margin-right: 0%;
+  }
+}
+
+.image-left {
+  float: left;
+  background-color: #fff;
+  border: 1px #ccc;
+  padding: 5px;
+  margin-right: 1.25em;
+}
+.image-right {
+  float: right;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-left: 1.25em;
+}
+big {
+  @include font-size($base-font-size + 2)
+}
+small {
+  @include font-size($base-font-size - 2)
+}
+
+
+
+
+
+
+/* 
+// Using jeet.gs
+
+
+.layout-row {
+	@include cf();
+}
+body.cke_editable {
+	padding: 20px;
+	.layout-row {
+		padding: 10px;
+		margin: 0 -10px 20px;
+		border: 1px dashed pink;
+	}
+	.layout-row > div {
+		border: 1px dashed #a5d3e4;
+	}
+	table {
+		td {
+			border: 1px dashed #ccc;
+		}
+	}
+}
+@include from(tablet-l) {
+	.col-one-half {
+		@include col(1/2, $gutter: 3);
+	}
+	.col-one-third {
+		@include col(1/3, $gutter: 3);
+	}
+	.col-two-thirds {
+		@include col(2/3, $gutter: 3);
+	}	
+	.col-one-quarter {
+		@include col(1/4, $gutter: 3);
+	}
+}
+
+*/

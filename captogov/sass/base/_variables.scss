@@ -1,0 +1,68 @@
+/* Layout */
+$container-width: 1120px; // max-width
+
+/**
+ * Jeet grid settings.
+ */
+$jeet-gutter:           4      !default; // equals percentage padding
+$jeet-parent-first:     false  !default;
+$jeet-layout-direction: "LTR"  !default;
+$jeet-max-width:        $container-width !default;
+
+/**
+ * Breakpoints - Breakpoint slicer
+ * https://github.com/lolmaus/breakpoint-slicer
+ */
+$slicer-breakpoints: 0 480px 768px 960px 1120px 1800px;
+$slicer-breakpoint-names: 'mobile' 'tablet-p' 'tablet-l' 'desktop' 'desktop-xl';
+$slicer-anti-overlap-corrections: 1px !default;
+
+/* Colors */
+$primary-color: #002056;
+$primary-color-lighter: #143f88;
+$secondary-color: #c6003c;
+$primary-gray: #e4e4e3;
+$primary-gray-text: #818285;
+$darker-gray-text: #6f6f6f;
+$light-bg-color: #F8F7F7;  
+$primary-blue: #004b85;
+$dark-blue: #001f36;
+
+/* Greys */
+$light-grey: #dfdfdf;
+$dark-grey: #777;
+
+/* Elements */
+$action-color: $primary-color; // e.g. buttons
+$action-color-hover: $secondary-color;
+
+/* Borders */
+$border-radius: 2px;
+$border-color: $light-grey;
+
+/* Links */
+$link-color: $primary-color;
+$link-color-hover: $action-color-hover;
+
+/* Font stuff */
+$text-color: #555;
+$heading-color: $primary-color-lighter;
+
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size: 16; // That's in pixels
+$base-line-height: 1.5;
+$heading-line-height: 1.3;
+
+$h1_font_size: 36;
+$h2_font_size: 24;
+$h3_font_size: 18;
+$h4_font_size: 14;
+$h5_font_size: 12;
+$h6_font_size: 12;
+
+$h1_color: $heading-color;
+$h2_color: $heading-color;
+$h3_color: $heading-color;
+$h4_color: $heading-color;
+$h5_color: $heading-color;
+$h6_color: $heading-color;

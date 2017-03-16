@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/**
+ * Style file @
+ *
+ * This file is compiled into style.css
+ */
+
+/* ---------- Import variables ---------- */
+@import 'base/variables';
+
+/* ---------- Import grid system ---------- */
+@import 'jeet/index';
+
+/* ---------- Import base ---------- */
+@import 'base/mixins';
+@import 'base/typography';
+@import 'base/breakpoint';
+@import 'base/breakpoint-slicer';
+@import 'base/breakpoint-slicer-debug';
+
+/* ---------- Import reset of govcms styles ---------- */
+@import 'design/govcms_reset';
+/* ---------- Import design ---------- */
+@import 'design/design';
+@import 'design/layout';
+
+/* ---------- Components ---------- 
+@import 'components/blockquote';
+@import 'components/blocks';
+@import 'components/breadcrumb';
+@import 'components/captions';
+@import 'components/ckeditor';
+@import 'components/forms';
+@import 'components/login';
+@import 'components/maintenance';
+@import 'components/pagination';
+@import 'components/sitemap';
+@import 'components/search';
+@import 'components/slider';
+@import 'components/tables';
+@import 'components/tabs-primary';
+*/
+@import 'components/buttons';

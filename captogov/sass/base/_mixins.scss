@@ -1,0 +1,64 @@
+/**
+ * Mixins
+ *
+ * Snippets of reusable CSS to develop faster and keep code readable
+ */
+
+
+// Font size in rem with pixel fall back for IE8
+@mixin font-size($size) {
+    font-size: $size + px;
+    font-size: ($size / 16) + rem; // 16 is browser font size i.e. html { font-size: 100% }
+}
+
+// Color for links with 10% darker hover & focus color
+@mixin color($color) {
+    color: $color;
+    
+    &:focus,
+    &:hover {
+      color: darken($color, 10%);
+    }
+}
+
+// Create vendor-prefixed CSS in one go, e.g.
+// @include vendor(border-radius, 4px);
+// @include vendor(transition, background 1s);
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+
+/* after chevrom mixin */
+@mixin after-chev($color, $rotation) {
+  &::after{
+    content: "";
+      display: inline-block;
+      width: 8px;
+    transform: rotate($rotation);
+      height: 8px;
+      margin-left: 10px;
+      margin-bottom: 0px;
+      border-right: 2px solid $color;
+        border-bottom: 2px solid $color;
+  }
+}
+
+@mixin title-bar($color, $psuedo, $top) {
+  position: relative;
+  &:#{$psuedo}{
+    content:"";
+    display: block;
+    height: 5px;
+    width: 50px;
+    background-color: $color;
+    position: absolute;
+    top: #{$top};
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

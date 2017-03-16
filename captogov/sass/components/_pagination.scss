@@ -1,0 +1,54 @@
+/*
+ * Pagination
+ */
+.item-list {
+	overflow: auto;
+	.pager {
+		padding: 0;
+		text-align: left;		
+		overflow: auto;
+		li {
+			float: left;
+			list-style: none;
+			padding: 0;
+		}
+		a {
+			color: $text-color;
+			background: #fff;
+			border-top: 1px solid $border-color;
+			border-left: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+			display: inline-block;
+			padding: 5px 14px;
+			&:hover {
+				background: $action-color-hover;
+				border-color: $action-color-hover;
+				color: #fff;
+				text-decoration: none;
+			}
+			&:active {
+				background: darken(#ccc, 20%);
+			}		
+		}
+		.pager-ellipsis {
+			background: #fff;
+			border-top: 1px solid $border-color;
+			border-left: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+			display: inline-block;
+			padding: 5px 12px;	/*  2 px less */		
+		}
+		.last {
+			border-right: 1px solid $border-color;
+		}
+		.pager-current {
+			background: $dark-grey;
+			border-top: 1px solid $border-color;
+			border-left: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+			color: #fff;
+			padding: 6px 15px;		
+			margin-top: -1px;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+
+       <polygon fill="#143f88" points="
+                 0,0
+                 33,0
+                33, 100
+                0, 100
+         " ></polygon>
+         <polygon fill="#c6003c" points="
+                 33,0
+                 66,0
+                66, 100
+                33, 100
+         " ></polygon>
+         <polygon fill="#facd33" points="
+                 66,0
+                 100,0
+                100, 100
+                66, 100
+         " ></polygon>
+        
+     </svg>

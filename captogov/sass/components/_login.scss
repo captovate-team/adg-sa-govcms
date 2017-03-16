@@ -1,0 +1,55 @@
+.page-user {
+  background: #fff;
+  padding: 0 20px;
+}
+
+#login-top img {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+#auth_box {
+  font-family: $base-font-family;
+  width: 400px;
+  margin: 3em auto 0;
+  .form-submit {
+    width: 100%;
+    float: none;
+    padding: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+#auth_box input[type="text"], #auth_box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  background: #f2f2f2;
+}
+
+#top_part {
+  margin-top: 2em;
+}
+
+#login-middle {
+  @include cf;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  box-shadow: 0 0 25px #f2f2f2;
+  padding: 1em;
+  margin-bottom: 2em;
+  h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+}
+
+#login-bottom {
+  text-align: center;
+}
+
+.login-footer {
+  margin-top: 4em;
+  text-align: center;
+}

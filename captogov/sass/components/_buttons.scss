@@ -1,0 +1,36 @@
+/*
+ * Buttons
+ */
+
+.button > a,
+a.button,
+input[type=submit] {
+  transition: all .3s;
+  display: inline-block;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 15px 25px;
+  background-color: $secondary-color;
+  text-decoration: none;
+  &:after{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    transform: rotate(-45deg);
+    height: 8px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+  }
+}
+.button > a:hover,
+a.button:hover,
+input[type=submit]:hover,
+.button:focus  {
+  background-color: $primary-color;
+  color: #fff;
+  text-decoration: none;
+}

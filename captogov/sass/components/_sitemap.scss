@@ -1,0 +1,39 @@
+.site-map {
+
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    
+    ul { 
+      padding-left: 20px;
+      
+      a {  background: #999; }
+      ul a { background: #777; }
+      ul ul a { background: #555; }
+      ul ul ul a { background: #333; }
+    }
+    
+    a {
+      padding: 5px 10px;
+      background: $primary-color; /* Change to primary-color colour */
+    }
+  }
+  
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    color: white;
+    display: inline-block;
+    margin-bottom: 1px;
+    
+    &:hover { 
+      background: darken($primary-color, 10%);
+      color: #fff;
+    }
+  }
+} 

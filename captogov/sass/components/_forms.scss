@@ -1,0 +1,230 @@
+/*
+ * Forms, webforms
+ */
+
+input[type=text], 
+input[type=password], 
+input[type=email], 
+input[type=url], 
+input[type=date], 
+input[type=month], 
+input[type=time], 
+input[type=datetime], 
+input[type=datetime-local], 
+input[type=week], 
+input[type=number], 
+input[type=search], 
+input[type=tel], 
+input[type=color],
+.form-text,
+select,
+textarea {
+  padding: .5em .6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  color: $text-color;
+  font-size: $base-font-size;
+  width: 100%;
+  max-width: 500px;  
+  outline: none;
+  &:focus {
+    border-color: $dark-grey;
+  }
+}
+fieldset {
+  margin-bottom: 1.5em;
+  padding: 0;
+  border: 0;
+  fieldset {
+    margin-bottom: 0;
+  }
+}
+form fieldset:last-of-type {
+    margin-bottom: 0;
+}
+.fieldset-description {
+  margin-bottom: 1.5em;
+}
+.grippie {
+  max-width: 500px; // same max as inputs
+}
+/*  legend... wait for it... dary! */
+legend {
+  padding: 0;
+  @include font-size($base-font-size + 2);
+  font-weight: 600;
+  border-bottom: 1px solid $border-color;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+
+/*  Placeholders. Keep as seperate selectors or it won't work  */
+
+// ie9 via jquery.placeholder.js polyfill
+.placeholder {
+  color: lighten($dark-grey, 10%);
+	opacity: 0.5 !important;
+}
+
+::-webkit-input-placeholder {
+  color: lighten($dark-grey, 10%);
+	opacity: 0.5 !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: lighten($dark-grey, 10%);
+	opacity: 0.5 !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: lighten($dark-grey, 10%); 
+	opacity: 0.5 !important;
+}
+
+:-ms-input-placeholder {  
+  color: lighten($dark-grey, 10%); 
+	opacity: 0.5 !important;
+}
+
+
+/*  Drupal classes */
+
+.form-item {
+  margin-bottom: 1.5em;
+}
+input[type="submit"], .form-submit {
+  background-color: $dark-grey;
+  cursor: pointer;
+  .views-reset-button & {
+    background-color: $dark-grey;
+    &:hover,
+    &:focus {
+      background-color: $action-color-hover;
+    }
+  }
+}
+
+.form-managed-file .form-submit {
+  background-color: $dark-grey;
+  &:hover {
+    background-color: $action-color-hover;
+  }
+}
+.description {
+  @include font-size($base-font-size - 2);
+  color: lighten($text-color, 30%);
+  margin: 0.75em 0;
+}
+.form-type-checkbox {
+  margin-bottom: 0;
+  label {
+    font-weight: 400;
+  }
+}
+.form-type-radio  {
+  margin-bottom: 0;
+}
+.form-radios label, 
+label.option {
+  display: inline;
+}
+.form-managed-file .form-file {
+  display: inline;
+  width: auto;
+}
+.form-type-date select {
+  width: auto;
+}
+
+/*
+  WEBFORM
+*/
+.webform-client-form {
+
+  .form,
+  .form-item {
+    margin-bottom: 1.5em;
+    label {
+      margin-bottom: 1.5em;
+    }  
+  }
+
+  .form-item {
+    position: relative;
+    > label {
+      font-weight: bold;
+    }
+
+    .label-inline {
+      display: inline;
+    }
+
+    textarea {
+      box-shadow: none;
+      border: 1px solid $border-color;
+      padding: 10px;
+      border-radius: 0;
+    }
+
+    input[readonly="readonly"] {
+      background-color: #fcfcfc;
+      border-color: $border-color;
+    }
+
+
+  }
+
+  .webform-component-checkboxes,
+  .webform-component-radios {
+    input {
+      padding-top: 2px;
+    }
+
+    &.form-item {
+      .form-item {
+          margin-bottom: 0;        
+          label {
+          font-weight: normal;
+          margin-bottom: 0;
+        }
+
+        .form-type-checkbox {
+          margin: 0;
+          padding: 10px 0 10px 5px;
+        }
+      }
+    }
+  }
+
+  .form-item-clear {
+    width: auto;
+    border: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+
+  .webform-component-date .form-select,
+  .webform-component-time .form-select {
+    width: auto;
+  }
+  .webform-component-textarea .grippie {
+    display: none;
+  }
+
+
+}
+
+
+/**
+ * Google Recaptcha
+ */
+.g-recaptcha { 
+  margin-bottom: 1.5em; 
+}

@@ -1,0 +1,152 @@
+/*
+ * Tables
+ */
+
+
+
+// Baseline styles
+
+table {
+  background-color: #fff; 
+  border: 0 solid transparent;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.5em;
+  caption {
+    text-align: left;
+  }
+  th {
+    text-align: left;
+  }
+  td {
+    vertical-align: top;
+  }  
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 5px;
+        vertical-align: top;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid $border-color;
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid $border-color;
+  }
+
+  // Nesting
+  table {
+    background-color: #fff;
+    margin-bottom: 0;
+  }
+}
+
+
+/**
+ * Responsive tables. tables in node content are wrapped with a div with class "table-responsive" via js in scripts.js
+ */
+
+.table-responsive {
+  width: 100%;
+  overflow-y: auto;
+}
+
+// add scrollbar for iOS so that a user can tell the table scrolls
+.table-responsive::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 3px solid #fff;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+
+// Bordered version
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+  border: 1px solid $border-color;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 1px solid $border-color;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+
+.table-striped {
+  > tbody > tr:nth-child(odd),
+  .odd-row {
+    background-color: #f2f2f2;
+  }
+  th, td {
+    border: 0;
+  }
+}
+.table-striped-vertical {
+  th:nth-child(odd),
+  td:nth-child(odd),
+  .odd-column {
+    background-color: #f2f2f2;
+  }  
+  th, td {
+    border: 0;
+  }
+}
+.table-vertical {
+  th, td {
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 1px solid $border-color;
+  }
+  tr td:last-child,
+  tr th:last-child {
+    border: 0;
+  }
+}
+
+.table-unstyled {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 0;
+        vertical-align: top;
+        border: 0;
+      }
+    }
+  }  
+}
